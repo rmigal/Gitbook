@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Gitbook</string>
 
+    <string name="error_default">Something went wrong</string>
+
     <!--region search-->
     <string name="search_title">Search</string>
+    <string name="search_avatar_description">User avatar</string>
     <!--endregion-->
 </resources>
