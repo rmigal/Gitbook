@@ -39,14 +39,14 @@ class UsersAdapter(
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         init {
-            itemView.setOnClickListener { userClickListener(users[adapterPosition].login) }
+            itemView.setOnClickListener { userClickListener(users[adapterPosition].username) }
         }
 
         fun bind(user: User) = with(itemView) {
             Picasso.get()
                 .load(user.avatarUrl)
                 .into(avatarImageView)
-            usernameTextView.text = user.login
+            usernameTextView.text = user.username
         }
     }
 }

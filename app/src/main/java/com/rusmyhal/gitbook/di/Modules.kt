@@ -12,7 +12,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 private val dataModule = module {
-
     single {
         Retrofit.Builder()
             .baseUrl(BuildConfig.GITHUB_ENDPOINT)
@@ -26,7 +25,6 @@ private val dataModule = module {
 }
 
 private val viewModelModule = module {
-
     viewModel { SearchViewModel(get(), AppDispatchers()) }
 }
 

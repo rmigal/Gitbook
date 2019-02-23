@@ -4,5 +4,5 @@ import com.rusmyhal.gitbook.model.data.server.entity.SearchResponse
 import com.rusmyhal.gitbook.model.entity.User
 
 
-val testSearchUser = User("login", 12345L, "avatar")
+val testSearchUser = User("username", 12345L, "avatar")
 val searchResponseSuccess = SearchResponse(listOf(testSearchUser))
