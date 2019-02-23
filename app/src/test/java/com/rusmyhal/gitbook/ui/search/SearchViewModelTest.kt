@@ -31,6 +31,7 @@ class SearchViewModelTest {
 
     private val usersObserver: Observer<List<User>> = mock()
     private val errorObserver: Observer<String> = mock()
+    private val loadingObserver: Observer<Boolean> = mock()
     private val searchRepository: SearchRepository = mock()
     private val responseBody: ResponseBody = mock()
 
@@ -39,11 +40,12 @@ class SearchViewModelTest {
         viewModel = SearchViewModel(searchRepository, TestDispatchers())
         viewModel.users.observeForever(usersObserver)
         viewModel.error.observeForever(errorObserver)
+        viewModel.loading.observeForever(loadingObserver)
     }
 
     @After
     fun after() {
-        verifyNoMoreInteractions(usersObserver, errorObserver)
+        verifyNoMoreInteractions(usersObserver, errorObserver, loadingObserver)
     }
 
     @Test
@@ -54,7 +56,11 @@ class SearchViewModelTest {
 
         viewModel.searchUsers("query")
 
-        verify(usersObserver).onChanged(searchResponseSuccess.users)
+        val inOrder = inOrder(loadingObserver, usersObserver)
+
+        inOrder.verify(loadingObserver).onChanged(true)
+        inOrder.verify(usersObserver).onChanged(searchResponseSuccess.users)
+        inOrder.verify(loadingObserver).onChanged(false)
 
         assertEquals(viewModel.users.value, searchResponseSuccess.users)
     }
@@ -67,6 +73,10 @@ class SearchViewModelTest {
 
         viewModel.searchUsers("query")
 
-        verify(errorObserver).onChanged("403 Response.error()")
+        val inOrder = inOrder(loadingObserver, errorObserver)
+
+        inOrder.verify(loadingObserver).onChanged(true)
+        inOrder.verify(errorObserver).onChanged("403 Response.error()")
+        inOrder.verify(loadingObserver).onChanged(false)
     }
 }

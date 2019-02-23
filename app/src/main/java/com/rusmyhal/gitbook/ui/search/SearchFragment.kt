@@ -34,6 +34,7 @@ class SearchFragment : BaseFragment() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 viewModel.searchUsers(query)
+                searchView.clearFocus()
                 return true
             }
 
@@ -41,38 +42,34 @@ class SearchFragment : BaseFragment() {
                 return false
             }
         })
-    }
 
-    override fun onStart() {
-        super.onStart()
         subscribe()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        dropObservers()
     }
 
     private fun subscribe() {
         viewModel.run {
-            users.observe(this@SearchFragment, Observer { users ->
+            users.observe(viewLifecycleOwner, Observer { users ->
                 users?.let {
                     usersAdapter.updateData(it)
                 }
             })
 
-            error.observe(this@SearchFragment, Observer { error ->
+            error.observe(viewLifecycleOwner, Observer { error ->
                 Toast.makeText(
                     context,
                     error ?: getString(R.string.error_default),
                     Toast.LENGTH_SHORT
                 ).show()
             })
+
+            loading.observe(viewLifecycleOwner, Observer { isShow ->
+                if (isShow) progress.show() else progress.hide()
+            })
         }
     }
 
-    private fun dropObservers() {
-        viewModel.users.removeObservers(this)
-        viewModel.error.removeObservers(this)
+    companion object {
+
+        const val TAG = "SearchFragment"
     }
 }
