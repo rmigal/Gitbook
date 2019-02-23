@@ -11,7 +11,7 @@ import com.rusmyhal.gitbook.model.data.server.entity.SearchResponse
 import com.rusmyhal.gitbook.model.entity.User
 import com.rusmyhal.gitbook.model.repository.SearchRepository
 import com.rusmyhal.gitbook.utils.arch.SingleLiveEvent
-import com.rusmyhal.gitbook.utils.awaitResult
+import com.rusmyhal.gitbook.utils.extensions.awaitResult
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 

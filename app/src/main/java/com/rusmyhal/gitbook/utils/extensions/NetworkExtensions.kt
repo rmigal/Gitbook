@@ -1,4 +1,4 @@
-package com.rusmyhal.gitbook.utils
+package com.rusmyhal.gitbook.utils.extensions
 
 import com.rusmyhal.gitbook.model.data.server.Error
 import com.rusmyhal.gitbook.model.data.server.NetworkResponse
