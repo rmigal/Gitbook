@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/item_repository_padding">
+
+    <TextView
+        android:id="@+id/repositoryNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_repository_name_text_color"
+        android:textSize="@dimen/item_repository_name_text_size"
+        app:layout_constraintBottom_toTopOf="@id/repositoryLanguageTextView"
+        app:layout_constraintEnd_toStartOf="@id/repositoryForksTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/cities" />
+
+    <TextView
+        android:id="@+id/repositoryLanguageTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/item_repository_language_text_color"
+        android:textSize="@dimen/item_repository_language_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/repositoryForksTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repositoryNameTextView"
+        tools:text="Language: Java" />
+
+    <TextView
+        android:id="@+id/repositoryForksTextView"
+        style="@style/ItemRepositoryStatTextView"
+        android:layout_marginEnd="@dimen/item_repository_stat_margin"
+        android:drawableEnd="@drawable/ic_fork_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/repositoryStarsTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/us_zipcodes" />
+
+    <TextView
+        android:id="@+id/repositoryStarsTextView"
+        style="@style/ItemRepositoryStatTextView"
+        android:drawableEnd="@drawable/ic_star_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/us_zipcodes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

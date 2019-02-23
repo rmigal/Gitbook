@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ItemRepositoryStatTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/item_repository_stat_drawable_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/item_repository_stat_text_color</item>
+    </style>
+
 </resources>
