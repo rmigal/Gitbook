@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/item_user_horizontal_padding"
+    android:paddingTop="@dimen/item_user_vertical_padding"
+    android:paddingEnd="@dimen/item_user_horizontal_padding"
+    android:paddingBottom="@dimen/item_user_vertical_padding"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="@dimen/item_user_avatar_size"
+        android:layout_height="@dimen/item_user_avatar_size"
+        android:contentDescription="@string/search_avatar_description"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/item_user_name_margin"
+        tools:text="Ruslan Myhal" />
+
+</LinearLayout>

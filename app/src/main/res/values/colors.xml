@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+    <!--region palette-->
+    <color name="charcoal">#24292d</color>
+    <color name="dark">#000002</color>
+    <color name="white">#ffffff</color>
+    <!--endregion-->
+
+    <!--region theme colors-->
+    <color name="colorPrimary">@color/charcoal</color>
+    <color name="colorPrimaryDark">@color/dark</color>
+    <color name="colorAccent">@color/white</color>
+    <!--endregion-->
+
+    <!--region main-->
+    <color name="toolbar_bg">@color/charcoal</color>
+    <!--endregion-->
+
+    <!--region search-->
+    <color name="search_header_background">@color/charcoal</color>
+    <color name="search_title_text_color">@color/white</color>
+    <color name="search_field_background">@color/white</color>
+    <!--endregion-->
+
+    <!--region profile-->
+    <color name="profile_header_background">@color/charcoal</color>
+    <color name="profile_text_color">@color/white</color>
+    <color name="profile_repos_empty_text_color">@color/charcoal</color>
+    <!--endregion-->
+
+    <!--region repositories-->
+    <color name="item_repo_name_text_color">@color/dark</color>
+    <color name="item_repo_language_text_color">@color/dark</color>
+    <color name="item_repo_stat_text_color">@color/charcoal</color>
+    <!--endregion-->
+
 </resources>

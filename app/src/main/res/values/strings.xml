@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Gitbook</string>
+
+    <string name="error_default">Something went wrong</string>
+
+    <!--region search-->
+    <string name="search_title">Search</string>
+    <string name="search_avatar_description">User avatar</string>
+    <!--endregion-->
+
+    <!--region profile-->
+    <string name="profile_followers">Followers</string>
+    <string name="profile_following">Following</string>
+    <string name="profile_repos_empty">User has no repositories.</string>
+    <string name="profile_no_intent_error">No application found that can handle this intent</string>
+    <!--endregion-->
+
+    <!--region item repository-->
+    <string name="item_repo_language">Language: %s</string>
+    <!--endregion-->
 </resources>
