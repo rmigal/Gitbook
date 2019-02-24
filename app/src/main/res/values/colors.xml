@@ -23,4 +23,16 @@
     <color name="search_field_background">@color/white</color>
     <!--endregion-->
 
+    <!--region profile-->
+    <color name="profile_header_background">@color/charcoal</color>
+    <color name="profile_text_color">@color/white</color>
+    <color name="profile_repos_empty_text_color">@color/charcoal</color>
+    <!--endregion-->
+
+    <!--region repositories-->
+    <color name="item_repo_name_text_color">@color/dark</color>
+    <color name="item_repo_language_text_color">@color/dark</color>
+    <color name="item_repo_stat_text_color">@color/charcoal</color>
+    <!--endregion-->
+
 </resources>

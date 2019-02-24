@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--region general-->
+    <dimen name="toolbar_elevation">6dp</dimen>
+    <!--endregion-->
+
     <!--region search-->
     <dimen name="search_header_height">150dp</dimen>
     <dimen name="search_title_text_size">24sp</dimen>
@@ -11,6 +15,23 @@
     <dimen name="item_user_vertical_padding">12dp</dimen>
     <dimen name="item_user_avatar_size">50dp</dimen>
     <dimen name="item_user_name_margin">16dp</dimen>
+    <!--endregion-->
+
+    <!--region profile-->
+    <dimen name="profile_header_height">200dp</dimen>
+    <dimen name="profile_avatar_size">100dp</dimen>
+    <dimen name="profile_name_margin">12dp</dimen>
+    <dimen name="profile_name_text_size">16sp</dimen>
+    <dimen name="profile_repos_empty_text_size">16sp</dimen>
+    <dimen name="profile_repos_empty_drawable_padding">12dp</dimen>
+    <!--endregion-->
+
+    <!--region repositories-->
+    <dimen name="item_repo_padding">16dp</dimen>
+    <dimen name="item_repo_name_text_size">18sp</dimen>
+    <dimen name="item_repo_language_text_size">12sp</dimen>
+    <dimen name="item_repo_stat_drawable_padding">6dp</dimen>
+    <dimen name="item_repo_stat_margin">12dp</dimen>
     <!--endregion-->
 
 </resources>

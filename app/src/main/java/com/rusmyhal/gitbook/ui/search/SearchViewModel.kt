@@ -1,6 +1,5 @@
 package com.rusmyhal.gitbook.ui.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,7 +7,7 @@ import com.rusmyhal.gitbook.model.DispatchersProvider
 import com.rusmyhal.gitbook.model.data.server.Error
 import com.rusmyhal.gitbook.model.data.server.Success
 import com.rusmyhal.gitbook.model.data.server.entity.SearchResponse
-import com.rusmyhal.gitbook.model.entity.User
+import com.rusmyhal.gitbook.model.data.server.entity.SearchUser
 import com.rusmyhal.gitbook.model.repository.SearchRepository
 import com.rusmyhal.gitbook.utils.arch.SingleLiveEvent
 import com.rusmyhal.gitbook.utils.extensions.awaitResult
@@ -24,13 +23,17 @@ class SearchViewModel(
     private val job = SupervisorJob()
     override val coroutineContext: CoroutineContext = dispatchersProvider.main + job
 
-    private val _users = MutableLiveData<List<User>>()
-    val users: LiveData<List<User>>
+    private val _users = MutableLiveData<List<SearchUser>>()
+    val users: LiveData<List<SearchUser>>
         get() = _users
 
     private val _error = SingleLiveEvent<String>()
     val error: LiveData<String>
         get() = _error
+
+    private val _navigateToProfile = SingleLiveEvent<String>()
+    val navigateToProfile: LiveData<String>
+        get() = _navigateToProfile
 
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean>
@@ -55,7 +58,7 @@ class SearchViewModel(
     }
 
     fun onUserClick(username: String) {
-        Log.d(TAG, "onUserClick() $username")
+        _navigateToProfile.value = username
     }
 
     companion object {
