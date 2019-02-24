@@ -1,17 +1,17 @@
-package com.rusmyhal.gitbook.ui.search
+package com.rusmyhal.gitbook.ui.profile
 
 import androidx.recyclerview.widget.DiffUtil
-import com.rusmyhal.gitbook.model.data.server.entity.SearchUser
+import com.rusmyhal.gitbook.model.data.server.entity.Repository
 
 
-class UsersDiffCallback(
-    private val oldList: List<SearchUser>,
-    private val newList: List<SearchUser>
+class RepositoriesDiffCallback(
+    private val oldList: List<Repository>,
+    private val newList: List<Repository>
 ) : DiffUtil.Callback() {
 
-    override fun getOldListSize() = oldList.size
-
     override fun getNewListSize() = newList.size
+
+    override fun getOldListSize() = oldList.size
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return oldList[oldItemPosition].id == newList[newItemPosition].id

@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/item_repository_padding">
+    android:padding="@dimen/item_repo_padding">
 
     <TextView
         android:id="@+id/repositoryNameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/item_repository_name_text_color"
-        android:textSize="@dimen/item_repository_name_text_size"
+        android:textColor="@color/item_repo_name_text_color"
+        android:textSize="@dimen/item_repo_name_text_size"
         app:layout_constraintBottom_toTopOf="@id/repositoryLanguageTextView"
         app:layout_constraintEnd_toStartOf="@id/repositoryForksTextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
         android:id="@+id/repositoryLanguageTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/item_repository_language_text_color"
-        android:textSize="@dimen/item_repository_language_text_size"
+        android:textColor="@color/item_repo_language_text_color"
+        android:textSize="@dimen/item_repo_language_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/repositoryForksTextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +33,8 @@
 
     <TextView
         android:id="@+id/repositoryForksTextView"
-        style="@style/ItemRepositoryStatTextView"
-        android:layout_marginEnd="@dimen/item_repository_stat_margin"
+        style="@style/ItemRepoStatTextView"
+        android:layout_marginEnd="@dimen/item_repo_stat_margin"
         android:drawableEnd="@drawable/ic_fork_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/repositoryStarsTextView"
@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/repositoryStarsTextView"
-        style="@style/ItemRepositoryStatTextView"
+        style="@style/ItemRepoStatTextView"
         android:drawableEnd="@drawable/ic_star_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
