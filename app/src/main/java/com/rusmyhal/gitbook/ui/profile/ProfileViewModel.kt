@@ -40,6 +40,8 @@ class ProfileViewModel(
     }
 
     fun init(username: String) = launch {
+        if (_user.value != null) return@launch
+
         _loading.value = true
 
         try {
